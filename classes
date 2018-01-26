@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+class student:
+
+     perc_rise = 1.05
+
+     def __init__(self, first, last, marks):
+         self.first = first
+         self.last = last
+         self.marks = marks
+         self.email = first + '.' + last + '@school.com'
+
+     def fullname(self):
+
+         return '{} {}'.format(self.first, self.last)
+
+     def apply_raise(self):
+ 
+         self.marks = int(self.marks * 1.05)
+
+std_1 = student('Neel','Verma',60)
+std_2 = student('Hemant','Sharma',90)
+
+print(std_1.marks)
+std_1.apply_raise()
+print(std_1.marks)
+print(std_2.marks)
+std_2.apply_raise()
+print(std_2.marks)
